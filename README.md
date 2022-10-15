@@ -1,6 +1,6 @@
 # Service Bus - Postman client
 
-This is a Postman boilerplate collection to use **Azure Service Bus** REST API as detailed in the [official docs][1].
+This is a Postman boilerplate collection to use **Azure Service Bus REST API** as detailed in the [official docs][1].
 
 <img src="assets/header.png" />
 
