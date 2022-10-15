@@ -22,13 +22,13 @@ Identify the values marked as `{...}` that need to be replaced.
 
 ```sh
 # Creates an app registration (ex: postman-servicebus-dev)
-az ad app create --display-name "{name}" --query "appId" -o tsv
+az ad app create --display-name "{name}" --query appId -o tsv
 
 # Create a secret ---> 💡 save the output for later
-az ad app credential reset --append --display-name "postman" --id "{APPLICATION ID}"
+az ad app credential reset --append --display-name postman --id "{APPLICATION ID}"
 
 # Create the service principal
-az ad sp create --id "{APP ID}" --query "id" -o tsv
+az ad sp create --id "{APP ID}" --query id -o tsv
 ```
 
 ### 2 - Assign permissions for the **Service Principal** to send messages to Service Bus
@@ -39,7 +39,7 @@ az servicebus namespace show -n "{SERVICEBUS NAMESPACE}" -g "{RESOURCE GROUP}" -
 
 # Assign the permission
 az role assignment create --assignee "{SERVICE PRINCIPAL ID}" \
-  --role "Azure Service Bus Data Sender" \
+  --role 'Azure Service Bus Data Sender' \
   --scope "{SERVICE BUS RESOURCE ID}"
 ```
 
