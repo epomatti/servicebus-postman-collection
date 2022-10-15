@@ -8,6 +8,8 @@ You'll find the Azure CLI instructions below to setup the required resources tha
 
 ## Setup
 
+Postman will need an App Registration to authenticate and send messages to Service Bus using access tokens.
+
 Steps to setup the Postman client:
 
 1. Create an App Registration on Azure AD with a client secret + Service Principal
