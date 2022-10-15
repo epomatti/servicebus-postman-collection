@@ -10,14 +10,14 @@ You'll find the Azure CLI instructions below to setup the required resources tha
 
 Steps to setup the Postman client:
 
-1. Create an App Registration on Azure AD with a client secret.
+1. Create an App Registration on Azure AD with a client secret + Service Principal
 2. Create a Service Principal for the App Registration.
 3. Assign the desired Service Bus RBAC to the Service Principal.
 4. Configure the Postman collection to connect to Azure AD and Service Bus.
 
 
 
-### 1 - Create the App Registration:
+### 1 - Create the App Registration
 
 ```sh
 # Create a new App Registration on Azure AD (ex: postman-servicebus-dev)
@@ -30,21 +30,21 @@ az ad app credential reset --append --display-name "postman" --id "{APPLICATION 
 az ad sp create --id "{APP ID}" --query "id" -o tsv
 ```
 
-2 - Assign permissions for the **Service Principal** to send messages to your Service Bus namespace:
+### 2 - Assign permissions for the **Service Principal** to send messages to Service Bus
 
 ```sh
-# Get the Service Bus full id
+# Get the Service Bus resource id
 az servicebus namespace show -n "{SERVICEBUS NAMESPACE}" -g "{RESOURCE GROUP}" --query id -o tsv
 
 # Assign the permission
 az role assignment create --assignee "{SERVICE PRINCIPAL ID}" \
---role "Azure Service Bus Data Sender" \
---scope "{SERVICE BUS ID}"
+  --role "Azure Service Bus Data Sender" \
+  --scope "{SERVICE BUS RESOURCE ID}"
 ```
 
 > ℹ️ Optionally, you can add `Azure Service Bus Data Receiver` or even `Azure Service Bus Data Owner` depending no your needs. Check out Azure RBAC [built-in roles][3].
 
-3 - Configure Postman & Send messages
+### 3 - Configure Postman & Send messages
 
 Download and import both the **Collection** and the **Environment** boilerplate files from this repository that are available under the [./postman](/postman/) folder.
 
