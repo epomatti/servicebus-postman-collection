@@ -47,11 +47,13 @@ az role assignment create --assignee "{SERVICE PRINCIPAL ID}" \
 
 Download and import both the **Collection** and the **Environment** boilerplate files from this repository that are available under the [./postman](/postman/) folder.
 
+#### 3.1 Set the environment variables
+
 Set the required values so Postman can authenticate and send messages. You'll add the dynamic values that were generated and your Service Bus namespace name and queues.
 
 <img src="assets/environment.png" />
 
-#### 3.1 - Authenticate
+#### 3.2 - Authenticate
 
 Select the environment on Postman. First you need to authenticate and generate a token:
 
@@ -59,7 +61,7 @@ Select the environment on Postman. First you need to authenticate and generate a
 
 <img src="assets/token.png" />
 
-#### 3.2 - Send Messages
+#### 3.3 - Send Messages
 
 ✅ You can now send messages to Service Bus.
 
