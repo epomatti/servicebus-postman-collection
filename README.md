@@ -1,10 +1,8 @@
 # Service Bus - Postman client
 
-This is a Postman boilerplate collection to use **Azure Service Bus** REST API following the procedures described in the [official docs][1].
+This is a Postman boilerplate collection to use **Azure Service Bus** REST API as detailed in the [official docs][1].
 
-You'll find the Azure CLI instructions below to setup the required resources that Postman will need.
-
-> ℹ️ If you're not familiar with the CLI, or prefer to do it from the portal, just create the resources manually following Microsoft [documentation][1].
+You'll find the Azure CLI instructions below to setup the required resources that Postman will need. You can also use the portal and just use the Postman collection.
 
 ## Setup
 
