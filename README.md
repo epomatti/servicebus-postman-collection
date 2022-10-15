@@ -71,7 +71,7 @@ I've added a batch request there as well. You might want to check Service Bus [R
 
 ## Contributing
 
-If you implement new operations be welcome to send a PR.
+Feel free to send a PR for new operations that you find useful for your use cases and complement this collection.
 
 [1]: https://learn.microsoft.com/en-us/rest/api/servicebus/get-azure-active-directory-token
 [2]: https://learn.microsoft.com/en-us/rest/api/servicebus/service-bus-runtime-rest
