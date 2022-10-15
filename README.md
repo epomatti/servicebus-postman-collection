@@ -11,22 +11,20 @@ You'll find the Azure CLI instructions below to setup the required resources tha
 Steps to setup the Postman client:
 
 1. Create an App Registration on Azure AD with a client secret + Service Principal
-2. Create a Service Principal for the App Registration.
-3. Assign the desired Service Bus RBAC to the Service Principal.
-4. Configure the Postman collection to connect to Azure AD and Service Bus.
-
+2. Assign the desired Service Bus RBAC to the Service Principal.
+3. Configure the Postman collection to connect to Azure AD and Service Bus.
 
 
 ### 1 - Create the App Registration
 
 ```sh
-# Create a new App Registration on Azure AD (ex: postman-servicebus-dev)
+# Creates an app registration (ex: postman-servicebus-dev)
 az ad app create --display-name "{name}" --query "appId" -o tsv
 
-# Set the application (client) ID and create a secret (💡 save this output for later)
+# Create a secret ---> 💡 save the output for later
 az ad app credential reset --append --display-name "postman" --id "{APPLICATION ID}"
 
-# Create a Service Principal for the application
+# Create the service principal
 az ad sp create --id "{APP ID}" --query "id" -o tsv
 ```
 
