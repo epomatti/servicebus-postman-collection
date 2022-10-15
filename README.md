@@ -14,6 +14,7 @@ Steps to setup the Postman client:
 2. Assign the desired Service Bus RBAC to the Service Principal.
 3. Configure the Postman collection to connect to Azure AD and Service Bus.
 
+Identify the values marked as `{...}` that need to be replaced.
 
 ### 1 - Create the App Registration
 
