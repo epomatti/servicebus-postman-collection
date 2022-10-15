@@ -38,8 +38,7 @@ az ad sp create --id "{APP ID}" --query id -o tsv
 az servicebus namespace show -n "{SERVICEBUS NAMESPACE}" -g "{RESOURCE GROUP}" --query id -o tsv
 
 # Assign the permission
-az role assignment create --assignee "{SERVICE PRINCIPAL ID}" \
-  --role 69a216fc-b8fb-44d8-bc22-1f3c2cd27a39 \
+az role assignment create --assignee "{SERVICE PRINCIPAL ID}" --role 69a216fc-b8fb-44d8-bc22-1f3c2cd27a39 \
   --scope "{SERVICE BUS RESOURCE ID}"
 ```
 
