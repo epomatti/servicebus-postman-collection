@@ -51,17 +51,25 @@ Set the required values so Postman can authenticate and send messages. You'll ad
 
 <img src="assets/environment.png" />
 
+#### 3.1 - Authenticate
+
 Select the environment on Postman. First you need to authenticate and generate a token:
 
 > 💡The token will be automatically saved to the context in the `{{access_token}}` variable on Postman
 
 <img src="assets/token.png" />
 
+#### 3.2 - Send Messages
+
 ✅ You can now send messages to Service Bus.
+
+<img src="assets/sendmessage.png" />
 
 I've added a batch request there as well. You might want to check Service Bus [REST API][2] for more operations, options, and troubleshooting.
 
-<img src="assets/sendmessage.png" />
+## Contributing
+
+If you implement new operations be welcome to send a PR.
 
 [1]: https://learn.microsoft.com/en-us/rest/api/servicebus/get-azure-active-directory-token
 [2]: https://learn.microsoft.com/en-us/rest/api/servicebus/service-bus-runtime-rest
