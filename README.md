@@ -25,7 +25,7 @@ Identify the values marked as `{...}` that need to be replaced.
 az ad app create --display-name "{name}" --query appId -o tsv
 
 # Create a secret ---> 💡 save the output for later
-az ad app credential reset --append --display-name postman --id "{APPLICATION ID}"
+az ad app credential reset --append --display-name postman --id "{APP ID}"
 
 # Create the service principal
 az ad sp create --id "{APP ID}" --query id -o tsv
